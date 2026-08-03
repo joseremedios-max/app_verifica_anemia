@@ -1,0 +1,55 @@
+name: app_anemia
+description: Diagnóstico de Anemia Offline com Edge-AI
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # =========================================================================
+  # 1. INTERFACE E COMPONENTES VISUAIS
+  # =========================================================================
+  cupertino_icons: ^1.0.6
+
+  # =========================================================================
+  # 2. IA E PROCESSAMENTO DE IMAGEM (EDGE-AI)
+  # =========================================================================
+  camera: ^0.11.0             # Acesso direto à câmera do hardware
+  onnxruntime: ^1.2.0         # Motor de inferência C++ para ler nosso .onnx
+  image: ^4.2.0               # Redimensionamento dos pixels para 224x224
+
+  # =========================================================================
+  # 3. BANCO DE DADOS LOCAL (OFFLINE-FIRST)
+  # =========================================================================
+  shared_preferences: ^2.2.2  # Armazena o histórico de exames no aparelho
+
+  # =========================================================================
+  # 4. TELEMETRIA E SINCRONIZAÇÃO NUVEM (API)
+  # =========================================================================
+  http: ^1.6.0                # Realiza requisições POST para o FastAPI
+  battery_plus: ^7.1.1        # Coleta a porcentagem da bateria
+  geolocator: ^14.0.3         # Coleta as coordenadas (Latitude/Longitude)
+  
+  # =========================================================================
+  # 5. GERENCIAMENTO DE PERMISSÕES NATIVAS
+  # =========================================================================
+  permission_handler: ^11.3.1 # Solicita permissão de Câmera e GPS ao usuário
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # =========================================================================
+  # 6. ARQUIVOS EMBUTIDOS NO APLICATIVO (ASSETS)
+  # =========================================================================
+  # Aqui declaramos o modelo de IA para que o Flutter o embuta no app
+  assets:
+    - assets/vit_hemoglobina_mobile_final.onnx  # Nosso cérebro de 21 MB
