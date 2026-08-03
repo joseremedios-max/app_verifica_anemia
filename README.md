@@ -13,14 +13,6 @@ O projeto foi construído com foco em **Offline-First**, permitindo o diagnósti
 *   **Banco de Dados Local:** Salvamento do histórico de exames no próprio aparelho utilizando `shared_preferences`.
 *   **Sincronização Nuvem & Telemetria:** Coleta de dados do GPS e nível de bateria do celular, enviando o payload completo via HTTP POST para um servidor FastAPI no momento do diagnóstico.
 
-## 🛠️ Tecnologias Utilizadas
-
-*   **Linguagem & Framework:** Dart & Flutter
-*   **IA & Visão Computacional:** ONNX Runtime (`onnxruntime`), Processamento de Imagem (`image`)
-*   **Integração Nativa:** Controle de Câmera (`camera`), Permissões (`permission_handler`)
-*   **Telemetria:** GPS (`geolocator`), Monitoramento de Hardware (`battery_plus`)
-*   **Comunicação & Armazenamento:** HTTP/REST (`http`), Armazenamento Chave-Valor (`shared_preferences`)
-
 
 ## 📱 Como Executar o Projeto
 # 🩸 Verifica Anemia (Edge-AI)
