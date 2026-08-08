@@ -1,10 +1,10 @@
-# 🩸 Verifica Anemia (Edge-AI)
+# 🔬🩺 Verifica Anemia (Edge-AI)
 
 Este é um aplicativo de triagem médica experimental desenvolvido em **Flutter**. Ele utiliza **Visão Computacional e Inteligência Artificial (Edge-AI)** rodando diretamente no celular (offline) para estimar os níveis de hemoglobina do paciente através de uma foto da conjuntiva palpebral.
 
 O projeto foi construído com foco em **Offline-First**, permitindo o diagnóstico em áreas remotas, mas conta com sincronização inteligente na nuvem (FastAPI) para envio de dados e telemetria (GPS e Bateria) quando há conexão disponível.
 
-## 🚀 Principais Funcionalidades
+##  🧩 Principais Funcionalidades
 
 *   **Diagnóstico Offline (Edge-AI):** Processamento do modelo Vision Transformer (ViT) via `onnxruntime` direto no hardware do dispositivo, sem depender de internet.
 *   **Validação de Qualidade de Imagem:** Algoritmo de segurança que analisa a contagem de pixels avermelhados, impedindo a geração de laudos a partir de fotos incorretas ou sem iluminação adequada.
