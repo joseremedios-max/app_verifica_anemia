@@ -7,6 +7,8 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
+  crypto: ^3.0.3     # Para gerar os hashes SHA-256 irreversíveis
+  encrypt: ^5.0.3    # Para a criptografia RSA de chave pública
   flutter:
     sdk: flutter
   
@@ -19,9 +21,9 @@ dependencies:
   # 2. IA E PROCESSAMENTO DE IMAGEM (EDGE-AI)
   # =========================================================================
   camera: ^0.11.0             # Acesso direto à câmera do hardware
-  onnxruntime: ^1.2.0         # Motor de inferência C++ para ler nosso .onnx
+  onnxruntime: 1.4.1         # ATUALIZADO: Motor C++ atualizado para múltiplas sessões
   image: ^4.2.0               # Redimensionamento dos pixels para 224x224
-
+  google_mlkit_face_detection: ^0.9.0
   # =========================================================================
   # 3. BANCO DE DADOS LOCAL (OFFLINE-FIRST)
   # =========================================================================
@@ -38,6 +40,7 @@ dependencies:
   # 5. GERENCIAMENTO DE PERMISSÕES NATIVAS
   # =========================================================================
   permission_handler: ^11.3.1 # Solicita permissão de Câmera e GPS ao usuário
+  pointycastle: ^3.9.1
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +53,7 @@ flutter:
   # =========================================================================
   # 6. ARQUIVOS EMBUTIDOS NO APLICATIVO (ASSETS)
   # =========================================================================
-  # Aqui declaramos o modelo de IA para que o Flutter o embuta no app
+  # Aqui declaramos os modelos de IA para que o Flutter os embuta no app
   assets:
-    - assets/vit_hemoglobina_mobile_final.onnx  # Nosso cérebro de 21 MB
+    - assets/vit_hemoglobina_mobile_final.onnx  # Nosso cérebro visual principal
+    - assets/xgboost_tabular_final.onnx         # NOVO: Modelo de fusão com Idade/Sexo

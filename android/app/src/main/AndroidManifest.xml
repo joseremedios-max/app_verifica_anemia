@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- PERMISSÃO DA CÂMERA ADICIONADA AQUI -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- RECURSO DE HARDWARE OBRIGATÓRIO ADICIONADO AQUI -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
     <application
         android:label="app_verifica_anemia"
         android:name="${applicationName}"
