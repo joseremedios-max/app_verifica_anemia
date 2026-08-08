@@ -25,4 +25,4 @@ O projeto foi construído com foco em **Offline-First**, permitindo o diagnósti
 
 **1. Clone o repositório:**
 ```bash
-git clone [https://github.com/SEU_USUARIO/app_verifica_anemia.git](https://github.com/SEU_USUARIO/app_verifica_anemia.git)
+git clone [https://github.com/joseremedios-max](https://github.com/joseremedios-max/app_verifica_anemia)
